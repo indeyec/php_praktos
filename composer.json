@@ -1,12 +1,12 @@
 {
-    "name": "jurapro/pop-it-mvc",
-    "description": "Simple mvc framework",
+    "name": "indeyec/php_praktos",
+    "description": "praktika",
     "type": "project",
     "license": "MIT",
     "authors": [
         {
-            "name": "jurapro",
-            "email": "jurapro@yandex.ru"
+            "name": "indeyec",
+            "email": "vlad.shilov03@mail.ru"
         }
     ],
     "minimum-stability": "dev",
