@@ -14,7 +14,6 @@ spl_autoload_register(function ($className) {
        }
    }
 });
-
 //Функция, возвращающая массив всех настроек приложения
 function getConfigs(string $path = DIR_CONFIG): array
 {
@@ -27,8 +26,6 @@ function getConfigs(string $path = DIR_CONFIG): array
    }
    return $settings;
 }
-
-return new Src\Application(new Src\Settings(getConfigs()));
 
 require_once __DIR__ . '/../routes/web.php';
 
