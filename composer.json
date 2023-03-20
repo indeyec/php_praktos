@@ -1,0 +1,14 @@
+{
+    "name": "indeyec/php_practos",
+    "description": "praktika",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Vladislav Shilov",
+            "email": "vlad.shilov03@mail.ru"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
