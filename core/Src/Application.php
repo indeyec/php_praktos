@@ -33,6 +33,8 @@ class Application
 }
 
 
+
+
    public function __get($key)
    {
        switch ($key) {
