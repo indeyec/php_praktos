@@ -2,14 +2,18 @@
 		<div class="avatar">
 			<p>AVATAR</p> 
 		</div>
-		<div class="blocki">
-				<div class="blocku">Фамилия</div>
-				<div class="blocku">Имя</div>
-				<div class="blocku">Отчество</div>
-				<div class="blocku">Дата рождения</div>
-		</div>
-		<div class="podraz">Подразделение</div>
+
 	</div>
+	<div class="bloc">
+				<?php
+
+					foreach ($users as $User) {
+
+						echo '<h5>Фамилия</h5>' . '<b>' . $User->FirstName .' '.'<h5>Имя</h5>' . $User->LastName .' '.'<h5>Отчество</h5>'. $User->MiddleName .
+						 ' '.'<h5>Дата рождения</h5>'. $User->Birthday . '</b>' ;
+					}
+				?>
+			</div>
 	<style>
 .avatar{
 	width: 260px;

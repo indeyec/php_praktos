@@ -65,10 +65,12 @@ class Site
        app()->route->redirect('/hello');
     }
     
-    public function profile(): string
-    $subdivisions = subdivision::all();
+    public function profile(Request $request): string
+   
    {
-       return new View('site.profile', ['subdivisions'=>$subdivisions]);
+    // $users = User::where('login', $request->login ?? 0)->get();
+    $users = user::all();
+       return new View('site.profile', ['users'=>$users]);
    }
     public function hello(): string
    {
