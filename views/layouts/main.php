@@ -53,19 +53,19 @@
 	<div class="header">
 		<div class="nav">
 			<div class="logo">
-                <a href="<?= app()->route->getUrl('/hello') ?>">Телефонный узел связи ТОМСК</a>
+                <a href="<?= app()->route->getUrl('/hello')?>">Телефонный узел связи ТОМСК</a>
 			</div>
-
 			<div class="link">
-                 <a href="<?= app()->route->getUrl('/signup') ?>">SIGN UP</a>
-                 <a href="<?= app()->route->getUrl('/login') ?>">LOGIN</a>
-				 <a href="<?= app()->route->getUrl('/profile') ?>">PROFILE</a>
+                 <a href="<?= app()->route->getUrl('/signup')?>">SIGN UP</a>
+                 <a href="<?= app()->route->getUrl('/login')?>">LOGIN</a>
+				 <a href="<?= app()->route->getUrl('/profile')?>">PROFILE</a>
 				 
 			</div>
 		</div>
 	</div>
-	<div content>
-	</div>
+	<main>
+		<?= $content ?? '' ?>
+	</main>
 </body>
 </html>
 
