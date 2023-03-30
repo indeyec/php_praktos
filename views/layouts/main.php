@@ -56,10 +56,20 @@
                 <a href="<?= app()->route->getUrl('/hello')?>">Телефонный узел связи ТОМСК</a>
 			</div>
 			<div class="link">
+			<?php
+        if (!app()->auth::check()):
+            ?>
                  <a href="<?= app()->route->getUrl('/signup')?>">SIGN UP</a>
                  <a href="<?= app()->route->getUrl('/login')?>">LOGIN</a>
-				 <a href="<?= app()->route->getUrl('/profile')?>">PROFILE</a>
 				 
+				 <?php
+        else:
+            ?>
+				 <a href="<?= app()->route->getUrl('/logout')?>">LOGOUT</a>
+				 <a href="<?= app()->route->getUrl('/profile')?>">PROFILE</a>
+				 <?php
+        endif;
+        ?>
 			</div>
 		</div>
 	</div>

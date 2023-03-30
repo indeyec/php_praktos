@@ -1,28 +1,10 @@
-	<div class="center">
-		<div class="blocks">
-			<div class="block">
-				<p>Фамилия</p>
-			</div>
-			<div class="block">
-				<p>Имя</p>
-			</div>
-			<div class="block">
-				<p>Дата рождения</p>
-			</div>
-		</div>
-	</div>
-
 <style>
-    body {
-	margin: 0;
-	padding: 0;
-}
-
 .center{
 	margin-top: 110px;
 	display: flex;
 	justify-content: center;
 }
+
 .blocks{
 	background-color: #D9B5B5;
 	width: 772px;
@@ -30,8 +12,9 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;
+
 }
+
 .block{
 	background-color: #D9D9D9;
 	width: 533px;
@@ -39,9 +22,59 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	margin-top:100px;
+	margin-top:30px;
 }
+
 .block > p {
 	font-size: 24px;
 }
+
+button{
+   background-color: grey;
+   width: 420px;
+   height: 50px;
+   color: pink;
+   font-size: 25px;
+   border-radius: 10px;
+}
+input{
+   padding: 10px;
+   width: 400px;
+   border: 0;
+   color: pink;
+   border-radius: 10px;
+   font-size: 20px;
+}
+
 </style>
+
+<h2>Авторизация</h2>
+<h3><?= $message ?? ''; ?></h3>
+
+<h3><?= app()->auth->user()->name ?? ''; ?></h3>
+<?php
+if (!app()->auth::check()):
+   ?>
+   <form method="post">
+   <div class="center">
+  	 <div class="blocks">
+	   <div class="block">
+			<input type="text" name="FirstnName"  placeholder="Фамилия">
+		</div>
+	    <div class="block">
+			<input type="text" name="LastName"  placeholder="имя">
+		</div>
+		<div class="block">
+			<input type="text" name="login"  placeholder="login">
+		</div>
+		<div class="block">
+			<input type="password" name="password"  placeholder="password">
+		</div>
+		<div class="block">
+			<button>Войти</button>
+	    </div>
+	   </div>
+   </form>
+   </div>
+<?php endif;
+

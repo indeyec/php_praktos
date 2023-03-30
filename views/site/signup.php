@@ -1,5 +1,7 @@
 
 <h2>Регистрация нового Абонента</h2>
+
+<h3><?= $message ?? ''; ?></h3>
 <div class="center">
 <form method="post">
 		<div class="blocks">
@@ -10,20 +12,20 @@
          <input type="text" name="LastName" required placeholder="Имя">
 			</div>
 			<div class="block">
-         <input type="text"name="LastName" required placeholder="Отчество">
+         <input type="text"name="MiddleName" required placeholder="Отчество">
 			</div>
 			<div class="block">
-         <input type="text"name="MiddleName" required placeholder="Дата рождения">
+         <input type="text"name="Birthday" required placeholder="Дата рождения">
 			</div>
 			<div class="block">
          <input type="text"name="Room_ID" required placeholder="Помещение">
 			</div>
 
 			<div class="block">
-         <input type="text"name="Login" required placeholder="Login">
+         <input type="text"name="login" required placeholder="login">
 			</div>
          <div class="block">
-         <input type="text"name="Password" required placeholder="Password">
+         <input type="password"name="password" required placeholder="password">
 			</div>
          <div class="block">
 				<button>REGISTER</button>
@@ -77,7 +79,7 @@ input{
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	margin-top:30px;
+	margin-top: 20px;
    border-radius: 20px;
 }
 
