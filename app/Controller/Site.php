@@ -87,6 +87,15 @@ class Site
     $subdivisions = subdivision::all();
        return new View('site.subdivision', ['subdivisions'=>$subdivisions]);
    }
+   public function add_user(Request $request): string
+   {
+      if ($request->method === 'POST' && User::create($request->all())) {
+          app()->route->redirect('/profile');
+      }
+      return new View('site.add_user',);
+   }
+
+
 }
 
 

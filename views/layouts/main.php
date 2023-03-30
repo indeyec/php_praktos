@@ -68,7 +68,13 @@
 				 <?php
         else:
             ?>
-			
+			<?php
+if (app()->auth::User()->id_role === 1):
+    ?>
+			<a href="<?= app()->route->getUrl('/add_user')?>">ADD_ABONENT</a>
+			<?php
+        endif;
+        ?>
 				 <a href="<?= app()->route->getUrl('/room')?>">ROOM</a>
 				 <a href="<?= app()->route->getUrl('/subdivision')?>">SUBDIVISION</a>
 				 <a href="<?= app()->route->getUrl('/profile')?>">PROFILE</a>
