@@ -27,7 +27,16 @@
          <div class="block">
          <input type="password"name="password" required placeholder="password">
 			</div>
-         <div class="block">
+         
+		<div class="block">
+			<select name="id_role" id="id_role">
+							<option value="1">Администратор</option>
+                            <option value="2">Абонент</option>
+                            
+                            
+            </select>
+		</div>
+		<div class="block">
 				<button>REGISTER</button>
 			</div>
 		</div>

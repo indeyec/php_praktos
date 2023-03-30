@@ -2,13 +2,20 @@
 	
 
 	<form method="post">
+	
 		<div class="bloco">
 			<div class="podraz">
 				<p>Помещение</p> 
 			</div>
 			<div class="create">
-				<button><a href="room_add">создать</a></button>
-			</div>
+			<?php
+if (app()->auth::User()->id_role === 1):
+    ?>
+		<button><a href="room_add">создать</a></button>
+<?php		
+endif;
+?>
+		</div>	
 		</div>
 		<div class="forma">
 			<div class="bloc">

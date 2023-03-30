@@ -7,7 +7,13 @@
 				<p>Подразделение</p> 
 			</div>
 			<div class="create">
-			<button><a href="subdivision_add">создать</a></button>
+			<?php
+if (app()->auth::User()->id_role === 1):
+    ?>
+		<button><a href="subdivision_add">создать</a></button>
+<?php		
+endif;
+?>
 			</div>
 		</div>
 		<div class="bloc">

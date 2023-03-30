@@ -68,6 +68,7 @@
 				 <?php
         else:
             ?>
+			
 				 <a href="<?= app()->route->getUrl('/room')?>">ROOM</a>
 				 <a href="<?= app()->route->getUrl('/subdivision')?>">SUBDIVISION</a>
 				 <a href="<?= app()->route->getUrl('/logout')?>">LOGOUT</a>

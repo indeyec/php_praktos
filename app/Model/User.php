@@ -19,7 +19,8 @@ class User extends Model implements IdentityInterface
        'Birthday',
        'Room_ID',
        'login',
-       'password'
+       'password',
+       'id_role'
 
    ];
 
