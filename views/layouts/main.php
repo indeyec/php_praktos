@@ -71,8 +71,10 @@
 			
 				 <a href="<?= app()->route->getUrl('/room')?>">ROOM</a>
 				 <a href="<?= app()->route->getUrl('/subdivision')?>">SUBDIVISION</a>
-				 <a href="<?= app()->route->getUrl('/logout')?>">LOGOUT</a>
 				 <a href="<?= app()->route->getUrl('/profile')?>">PROFILE</a>
+				 <a href="<?= app()->route->getUrl('/logout')?>">LOGOUT(<?= app()->auth::User()->login ?>)</a>
+				 
+				 
 				 <?php
         endif;
         ?>
@@ -81,6 +83,7 @@
 	</div>
 	<main>
 		<?= $content ?? '' ?>
+		
 	</main>
 </body>
 </html>
