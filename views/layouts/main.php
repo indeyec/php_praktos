@@ -37,6 +37,9 @@
 	padding: 20px;
 	font-size: 24px;
 }
+.link >a:hover{
+	color: pink;
+}
 .center{
 	margin-top: 100px;
 	display: flex;
@@ -65,6 +68,8 @@
 				 <?php
         else:
             ?>
+				 <a href="<?= app()->route->getUrl('/room')?>">ROOM</a>
+				 <a href="<?= app()->route->getUrl('/subdivision')?>">SUBDIVISION</a>
 				 <a href="<?= app()->route->getUrl('/logout')?>">LOGOUT</a>
 				 <a href="<?= app()->route->getUrl('/profile')?>">PROFILE</a>
 				 <?php

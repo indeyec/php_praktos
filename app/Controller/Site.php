@@ -7,6 +7,9 @@ use Src\View;
 use Src\Request;
 use Model\User;
 use Src\Auth\Auth;
+use Model\Room;
+use Model\Subdivision;
+
 
 class Site
 {
@@ -23,6 +26,25 @@ class Site
        }
        return new View('site.signup',);
     }
+
+    public function room_add(Request $request): string
+    {
+         
+    if ($request->method === 'POST' && Room::create($request->all())) {
+        app()->route->redirect('/room');
+    }
+        return new View('site.room_add');
+    }
+ 
+    public function subdivision_add(Request $request): string
+{
+    if ($request->method === 'POST' && Subdivision::create($request->all())) {
+        app()->route->redirect('/subdivision');
+    }
+    
+        return new View('site.subdivision_add', []);
+    }
+
     public function login(Request $request): string
     {
        //Если просто обращение к странице, то отобразить форму
@@ -31,7 +53,7 @@ class Site
        }
        //Если удалось аутентифицировать пользователя, то редирект
        if (Auth::attempt($request->all())) {
-           app()->route->redirect('/hello');
+           app()->route->redirect('/profile');
        }
        //Если аутентификация не удалась, то сообщение об ошибке
        return new View('site.login', ['message' => 'Неправильные логин или пароль']);
@@ -42,18 +64,27 @@ class Site
        Auth::logout();
        app()->route->redirect('/hello');
     }
-
+    
     public function profile(): string
+    $subdivisions = subdivision::all();
    {
-       return new View('site.profile', []);
+       return new View('site.profile', ['subdivisions'=>$subdivisions]);
    }
     public function hello(): string
    {
        return new View('site.hello', []);
    }
-
+   public function room(): string
+   {
+    $rooms = room::all();
+       return new View('site.room', ['rooms'=>$rooms]);
+   }
+   public function subdivision(): string
    
-   
+   {
+    $subdivisions = subdivision::all();
+       return new View('site.subdivision', ['subdivisions'=>$subdivisions]);
+   }
 }
 
 
