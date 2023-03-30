@@ -19,9 +19,9 @@ class Site
     public function signup(Request $request): string
     {
        if ($request->method === 'POST' && User::create($request->all())) {
-           app()->route->redirect('/go');
+           app()->route->redirect('/');
        }
-       return new View('site.signup');
+       return new View('site.signup',);
     }
     public function login(Request $request): string
     {
@@ -40,14 +40,22 @@ class Site
     public function logout(): void
     {
        Auth::logout();
-       app()->route->redirect('/');
+       app()->route->redirect('/hello');
     }
-    
-    
 
-   public function hello(): string
+    public function profile(): string
    {
-       return new View('site.hello', ['message' => 'hello working']);
+       return new View('site.profile', []);
+   }
+    public function hello(): string
+   {
+       return new View('site.hello', []);
+   }
+
+   
+   public function main(): string
+   {
+       return new View('layouts.main', []);
    }
 }
 
