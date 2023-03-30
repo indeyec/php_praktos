@@ -1,6 +1,7 @@
 <h3><?= $message ?? ''; ?></h3>
 
 <form method="post">
+<input name="csrf_token" type="hidden" value="<?= app()->auth::generateCSRF() ?>"/>
     <div class="centr">
 		<div class="blocks">
 			<div class="block">

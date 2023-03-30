@@ -4,6 +4,7 @@
 <h3><?= $message ?? ''; ?></h3>
 <div class="center">
 <form method="post">
+<input name="csrf_token" type="hidden" value="<?= app()->auth::generateCSRF() ?>"/>
 		<div class="blocks">
 			<div class="block">
          <input type="text" name="FirstName"required placeholder="Фамилия">

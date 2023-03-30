@@ -56,6 +56,7 @@ input{
 if (!app()->auth::check()):
    ?>
    <form method="post">
+   <input name="csrf_token" type="hidden" value="<?= app()->auth::generateCSRF() ?>"/>
    <div class="center">
   	 <div class="blocks">
 	   <div class="block">
