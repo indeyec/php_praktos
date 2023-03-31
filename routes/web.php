@@ -14,3 +14,4 @@ Route::add('GET', '/logout', [Controller\Site::class, 'logout']);
 Route::add(['GET', 'POST'], '/add_user', [Controller\Site::class, 'add_user']);
 Route::add(['GET', 'POST'], '/search', [Controller\Site::class, 'search']);
 
+
