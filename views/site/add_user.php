@@ -92,6 +92,17 @@ input{
 	margin-top: 20px;
    border-radius: 20px;
 }
+select {
+        background-color: grey;
+        width: 420px;
+        height: 40px;
+        color: pink;
+        font-size: 25px;
+        border-radius: 10px;
+		align-items: center;
+		justify-content: center;
+        
+    }
 
 .block > p {
 	font-size: 24px;
