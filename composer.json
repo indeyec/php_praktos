@@ -15,7 +15,8 @@
         "illuminate/database": "^11.0@dev",
         "illuminate/events": "^11.0@dev",
         "nikic/fast-route": "^2.0@dev",
-        "indeyec/collect": "dev-master"
+        "indeyec/collect": "*",
+        "phpunit/phpunit": "^10.1@dev"
     },
     "autoload": {
         "psr-4": {
@@ -23,4 +24,4 @@
             "": "app/"
         }
     }
- }
+}
