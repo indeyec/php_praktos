@@ -175,12 +175,8 @@ class Site
 
    public function search()
    {
-    $users = user::all();
-
-       if (isset($request['search'])) {
-           $users = $users->where('FirstName',  '%'.$request['search'].'%');
-       }
-       return (new View())->render('site.search', ['users'=>$users]);
+    
+       return (new View())->render('site.search');
    }
 
 
