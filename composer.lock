@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bf8609e5d03c3680e1827c58bb76fb77",
+    "content-hash": "9dc6e3c8ed71197b54ba17caa4584e14",
     "packages": [
         {
             "name": "brick/math",
@@ -703,6 +703,50 @@
                 "source": "https://github.com/laravel/framework"
             },
             "time": "2023-03-13T03:05:39+00:00"
+        },
+        {
+            "name": "indeyec/collect",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/indeyec/collect.git",
+                "reference": "8f882cc55795d8f06c9358c59c4ce6f1e8847256"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/indeyec/collect/zipball/8f882cc55795d8f06c9358c59c4ce6f1e8847256",
+                "reference": "8f882cc55795d8f06c9358c59c4ce6f1e8847256",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.4 | ^8.0"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "Collect\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Vladislav Shilov",
+                    "email": "vlad.shilov03@mail.ru"
+                }
+            ],
+            "description": "Module for working with arrays",
+            "support": {
+                "issues": "https://github.com/indeyec/collect/issues",
+                "source": "https://github.com/indeyec/collect/tree/master"
+            },
+            "time": "2023-03-31T12:18:24+00:00"
         },
         {
             "name": "nesbot/carbon",
