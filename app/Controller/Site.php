@@ -10,6 +10,7 @@ use Src\Auth\Auth;
 use Model\Room;
 use Model\Subdivision;
 use Src\Validator\Validator;
+use Model\Subunit;
 
 
 class Site
@@ -91,7 +92,7 @@ class Site
                    ['message' => json_encode($validator->errors(), JSON_UNESCAPED_UNICODE)]);
            }
     
-           if (Room::create($request->all())) {
+           if (Subdivision::create($request->all())) {
                app()->route->redirect('/subdivision');
            }
        }
@@ -171,6 +172,20 @@ class Site
       }
       return new View('site.add_user');
    }
+
+   public function search()
+   {
+    $users = user::all();
+
+       if (isset($request['search'])) {
+           $users = $users->where('FirstName',  '%'.$request['search'].'%');
+       }
+       return (new View())->render('site.search', ['users'=>$users]);
+   }
+
+
+
+
 }
 
 
