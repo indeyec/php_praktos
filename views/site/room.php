@@ -15,7 +15,19 @@ if (app()->auth::User()->id_role === 1):
 <?php		
 endif;
 ?>
-		</div>	
+		</div>
+		<div class="vidpodraz">
+				<p>Вид Помещения</p> 
+			</div>
+			<div class="create2">
+			<?php
+if (app()->auth::User()->id_role === 1):
+    ?>
+		<button><a href="vid_room_add">создать</a></button>
+<?php		
+endif;
+?>
+		</div>
 		</div>
 		<div class="forma">
 			<div class="bloc">
@@ -45,6 +57,14 @@ endif;
 	background-color: #D9D9D9;
 	margin-right: 20px;
 	font-size: 20px;
+}
+.vidpodraz{
+	width: 279px;
+	height: 56px;
+	background-color: #D9D9D9;
+	margin-right: 20px;
+	font-size: 20px;
+	margin-left: 40px;
 }
 
 .create{

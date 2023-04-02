@@ -11,7 +11,7 @@ use Model\Room;
 use Model\Subdivision;
 use Src\Validator\Validator;
 use Model\Subunit;
-
+use Model\Vidroom;
 
 class Site
 {
@@ -73,6 +73,27 @@ class Site
            }
        }
        return new View('site.room_add');
+    }
+
+    public function vid_room_add(Request $request): string
+    {
+       if ($request->method === 'POST') {
+    
+           $validator = new Validator($request->all(), [
+               'Name' => ['required'],
+           ], [
+               'required' => 'Поле :field пусто',
+               'unique' => 'Поле :field должно быть уникально'
+           ]);
+           if($validator->fails()){
+               return new View('site.signup',
+                   ['message' => json_encode($validator->errors(), JSON_UNESCAPED_UNICODE)]);
+           }
+           if (Vidroom::create($request->all())) {
+               app()->route->redirect('/room');
+           }
+       }
+       return new View('site.vid_room_add');
     }
 
 
