@@ -65,7 +65,7 @@
                  <a href="<?= app()->route->getUrl('/signup')?>">SIGN UP</a>
                  <a href="<?= app()->route->getUrl('/login')?>">LOGIN</a>
 				 
-				 <?php
+		<?php
         else:
             ?>
 			<?php
