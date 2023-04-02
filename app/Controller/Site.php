@@ -230,7 +230,7 @@ class Site
       if ($request->method === 'POST') {
    
           $validator = new Validator($request->all(), [
-              'Name' => ['required'],
+              'number' => ['required'],
               
           ], [
               'required' => 'Поле :field пусто',
