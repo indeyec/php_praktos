@@ -8,8 +8,17 @@
          <input type="text" name="Name"required placeholder="Название">
 			</div>
 			<div class="block">
-         <input type="text" name="Vid" required placeholder="Вид">
-			</div>
+                <?php
+                echo('Вид:');
+                echo '<select id="" name="name">';
+                foreach ($vidsubdivisions as $Vidsubdivision) {
+                    echo "<option value=\"$Vidsubdivision->name\">"
+                        . $Vidsubdivision->name.
+                        "</option>";
+                }
+                echo '</select>';
+                ?>
+            </div>
 
 			
          <div class="block">

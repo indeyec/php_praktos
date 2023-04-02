@@ -23,6 +23,32 @@
 			</div>
 
 			<div class="block">
+                <?php
+                echo('Выбор номера:');
+                echo '<select id="" name="number">';
+                foreach ($usernums as $Usernum) {
+                    echo "<option value=\"$Usernum->number\">"
+                        . $Usernum->number.
+                        "</option>";
+                }
+                echo '</select>';
+                ?>
+            </div>
+
+			<div class="block">
+                <?php
+                echo('Выбор подразделения:');
+                echo '<select id="" name="Name">';
+                foreach ($subdivisions as $Subdivision) {
+                    echo "<option value=\"$Subdivision->Name\">"
+                        . $Subdivision->Name.
+                        "</option>";
+                }
+                echo '</select>';
+                ?>
+            </div>
+
+			<div class="block">
          <input type="text"name="login" required placeholder="login">
 			</div>
          <div class="block">
