@@ -2,7 +2,20 @@
     <div class="avatar">
         <p>AVATAR</p>
     </div>
-
+	<div class="bloco">
+	<div class="vidpodraz">
+				<p>Номер абонента</p> 
+			</div>
+			<div class="create">
+			<?php
+if (app()->auth::User()->id_role === 1):
+    ?>
+		<button><a href="user_num">создать</a></button>
+<?php		
+endif;
+?>
+		</div>
+		</div>
 </div>
 <div class="main_block">
 	<div class="bloc">
@@ -45,8 +58,42 @@
         margin-left: 20px;
 		width: 600px;
 		border: 2px solid black;
+		margin-top: 50px;
     }
+	.vidpodraz{
+	width: 279px;
+	height: 56px;
+	background-color: #D9D9D9;
+	margin-right: 20px;
+	font-size: 20px;
+	margin-left: 40px;
+}
+.bloco{
+	display: flex;
+	align-items: center;
+	text-align: center;	
+	margin-top: -19px;
+}
 
+button{
+   background-color: grey;
+   width: 200px;
+   height: 35px;
+   color: pink;
+   font-size: 25px;
+   border-radius: 10px;
+   margin-top: 10px;
+}
+
+button > a{
+	text-decoration: none;
+	color: pink;
+}
+.create{
+	width: 236px;
+	height: 56px;
+	background-color: #D9D9D9;
+}
     .bloc {
         width: 200px;
         margin-left: 20px;
