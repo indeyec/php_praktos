@@ -15,6 +15,18 @@ if (app()->auth::User()->id_role === 1):
 endif;
 ?>
 			</div>
+			<div class="vidpodraz">
+				<p>Вид подразделения</p> 
+			</div>
+			<div class="create">
+			<?php
+if (app()->auth::User()->id_role === 1):
+    ?>
+		<button><a href="vid_subdivision_add">создать</a></button>
+<?php		
+endif;
+?>
+			</div>
 		</div>
 		<div class="bloc">
 			<?php
@@ -40,8 +52,17 @@ foreach ($subdivisions as $Subdivision) {
 	background-color: #D9D9D9;
 	margin-right: 20px;
 	font-size: 20px;
+	
 }
-
+.vidpodraz{
+	width: 279px;
+	height: 56px;
+	background-color: #D9D9D9;
+	margin-right: 20px;
+	font-size: 20px;
+	margin-left: 40px;
+	
+}
 
 .create{
 	width: 236px;

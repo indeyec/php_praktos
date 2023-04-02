@@ -12,6 +12,7 @@ use Model\Subdivision;
 use Src\Validator\Validator;
 use Model\Subunit;
 use Model\Vidroom;
+use Model\Vidsubdivision;
 
 class Site
 {
@@ -120,7 +121,29 @@ class Site
        }
        return new View('site.subdivision_add');
     }
-
+    public function vid_subdivision_add(Request $request): string
+    {
+       if ($request->method === 'POST') {
+    
+           $validator = new Validator($request->all(), [
+               'Name' => ['required'],
+               
+           ], [
+               'required' => 'Поле :field пусто',
+               'unique' => 'Поле :field должно быть уникально'
+           ]);
+    
+           if($validator->fails()){
+               return new View('site.signup',
+                   ['message' => json_encode($validator->errors(), JSON_UNESCAPED_UNICODE)]);
+           }
+    
+           if (Vidsubdivision::create($request->all())) {
+               app()->route->redirect('/subdivision');
+           }
+       }
+       return new View('site.vid_subdivision_add');
+    }
  
     
 
