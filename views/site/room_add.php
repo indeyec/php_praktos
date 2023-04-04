@@ -22,7 +22,7 @@
 
 			<div class="block">
                 <?php
-                echo('Помещение:');
+                echo('Подразделение:');
                 echo '<select id="" name="Mame">';
                 foreach ($subdivisions as $Subdivision) {
                     echo "<option value=\"$Subdivision->Name\">"

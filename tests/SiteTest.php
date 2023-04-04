@@ -57,7 +57,7 @@ class SiteTest extends TestCase
                 '<pre>{"login":["Поле login должно быть уникально"]}</pre>',
             ],
             ['POST', ['name' => 'admin', 'login' => md5(time()), 'password' => 'admin'],
-                'Location: /pop-it-mvc/go/',
+                'Location: /login/',
             ],
         ];
     }
