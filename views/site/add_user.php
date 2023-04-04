@@ -16,11 +16,9 @@
          <input type="text"name="MiddleName" required placeholder="Отчество">
 			</div>
 			<div class="block">
-         <input type="text"name="Birthday" required placeholder="Дата рождения">
+         <input type="date"name="Birthday" required placeholder="Дата рождения">
 			</div>
-			<div class="block">
-         <input type="text"name="Room_ID" required placeholder="Помещение">
-			</div>
+			
 
 			<div class="block">
                 <?php
@@ -58,7 +56,8 @@
 		<div class="block">
 			<select name="id_role" id="id_role">
 							<option value="1">Администратор</option>
-                            <option value="2">Абонент</option>
+                     <option value="2">Менеджер</option>
+                     <option value="3">Абонент</option>
                             
                             
             </select>

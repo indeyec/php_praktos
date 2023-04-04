@@ -4,7 +4,7 @@ use Src\Route;
 
 Route::add('GET', '/hello', [Controller\Site::class, 'hello'])->middleware('auth');
 Route::add(['GET', 'POST'], '/signup', [Controller\Site::class, 'signup'])->middleware('auth');
-Route::add(['GET', 'POST'], '/login', [Controller\Site::class, 'login'])->middleware('auth');
+Route::add(['GET', 'POST'], '/login', [Controller\Site::class, 'login']);
 Route::add(['GET', 'POST'], '/subdivision', [Controller\Site::class, 'subdivision'])->middleware('auth');
 Route::add(['GET', 'POST'], '/room', [Controller\Site::class, 'room'])->middleware('auth');
 Route::add(['GET', 'POST'], '/room_add', [Controller\Site::class, 'room_add'])->middleware('auth');

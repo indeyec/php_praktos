@@ -62,27 +62,23 @@
 			<?php
         if (!app()->auth::check()):
             ?>
-                 <a href="<?= app()->route->getUrl('/signup')?>">SIGN UP</a>
-                 <a href="<?= app()->route->getUrl('/login')?>">LOGIN</a>
-				 
+            <a href="<?= app()->route->getUrl('/signup')?>">SIGN UP</a>
+            <a href="<?= app()->route->getUrl('/login')?>">LOGIN</a>	 
 		<?php
         else:
             ?>
 			<?php
-if (app()->auth::User()->id_role === 1):
+if (app()->auth::User()->id_role === 1 || 2):
     ?>
 			<a href="<?= app()->route->getUrl('/add_user')?>">ADD_ABONENT</a>
 			<a href="<?= app()->route->getUrl('/profile')?>">ABONENT</a>
 			<?php
         endif;
         ?>
-				 <a href="<?= app()->route->getUrl('/room')?>">ROOM</a>
-				 <a href="<?= app()->route->getUrl('/subdivision')?>">SUBDIVISION</a>
-				 
-				 <a href="<?= app()->route->getUrl('/logout')?>">LOGOUT(<?= app()->auth::User()->login ?>)</a>
-				 
-				 
-				 <?php
+			<a href="<?= app()->route->getUrl('/room')?>">ROOM</a>
+			<a href="<?= app()->route->getUrl('/subdivision')?>">SUBDIVISION</a>	 
+			<a href="<?= app()->route->getUrl('/logout')?>">LOGOUT(<?= app()->auth::User()->login ?>)</a>
+		<?php
         endif;
         ?>
 			</div>

@@ -59,12 +59,7 @@ if (!app()->auth::check()):
    <input name="csrf_token" type="hidden" value="<?= app()->auth::generateCSRF() ?>"/>
    <div class="center">
   	 <div class="blocks">
-	   <div class="block">
-			<input type="text" name="FirstnName"  placeholder="Фамилия">
-		</div>
-	    <div class="block">
-			<input type="text" name="LastName"  placeholder="имя">
-		</div>
+	   
 		<div class="block">
 			<input type="text" name="login"  placeholder="login">
 		</div>
@@ -77,5 +72,6 @@ if (!app()->auth::check()):
 	   </div>
    </form>
    </div>
-<?php endif;
+<?php 
+endif;
 
