@@ -4,25 +4,27 @@
 	<form method="post">
 	
 		<div class="bloco">
+		<?php
+if (app()->auth::User()->id_role === 1):
+    ?>
 			<div class="podraz">
 				<p>Помещение</p> 
 			</div>
 			<div class="create">
-			<?php
-if (app()->auth::User()->id_role === 1):
-    ?>
+			
 		<button><a href="room_add">создать</a></button>
 <?php		
 endif;
 ?>
 		</div>
+		<?php
+if (app()->auth::User()->id_role === 1):
+    ?>
 		<div class="vidpodraz">
 				<p>Вид Помещения</p> 
 			</div>
 			<div class="create2">
-			<?php
-if (app()->auth::User()->id_role === 1):
-    ?>
+			
 		<button><a href="vid_room_add">создать</a></button>
 <?php		
 endif;

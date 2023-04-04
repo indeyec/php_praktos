@@ -3,13 +3,14 @@
         <p>AVATAR</p>
     </div>
 	<div class="bloco">
+	<?php
+if (app()->auth::User()->id_role === 1):
+    ?>
 	<div class="vidpodraz">
 				<p>Номер абонента</p> 
 			</div>
 			<div class="create">
-			<?php
-if (app()->auth::User()->id_role === 1):
-    ?>
+			
 		<button><a href="user_num">создать</a></button>
 <?php		
 endif;
