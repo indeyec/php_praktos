@@ -32,17 +32,31 @@ endif;
 		</div>
 		</div>
 		<div class="forma">
-			<div class="bloc">
-				<?php
+            <div class="bloc">
+                <div class="block_room">
+                    <?php
 
-					foreach ($rooms as $Room) {
-						echo '<tr>';
-						echo '<td>' .'<h5>Помещение</h5>' . '<b>' . $Room->id .' ' . $Room->Name .' '. $Room->Vid . ' '. $Room->Subdivision . '</b>' . '</td>';
-					}
-				?>
-			</div>
-		
-		</div>
+                    foreach ($rooms as $Room) {
+                        echo '<tr>';
+                        echo '<div class="inside_block">' . '<td>' . '<h5>Помещения</h5>' . '<b>' . 'имя помещения - ' . $Room->NameRoom . '</b>' . '</td>' . '</div>';
+
+                    }
+                    ?>
+                </div>
+
+                <div class="block_room">
+                    <?php
+
+                    foreach ($users as $User) {
+                        echo '<tr>';
+                        echo '<div class="inside_block">' . '<td>' . '<h5>Пользователи</h5>' . '<b>' . 'пользователь - ' . $User->login . '<br>' . 'помещение - ' . $User->NameRoom . '<br>' . '</b>' . '</td>' . '</div>';
+                    }
+                    ?>
+
+                </div>
+            </div>
+
+        </div>
 
 </form>
 
@@ -53,6 +67,31 @@ endif;
 	text-align: center;	
 	margin-top: -19px;
 }
+.bloc {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 100px;
+        width: 1032px;
+        height: 637px;
+        background-color: #AD8B79;
+    }
+.forma {
+        display: flex;
+        justify-content: center;
+    }
+
+    .inside_block {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .block_room {
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+    }
 .podraz{
 	width: 279px;
 	height: 56px;

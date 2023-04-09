@@ -11,10 +11,11 @@ class Room extends Model
 
    public $timestamps = false;
    protected $fillable = [
-       'id',
-       'Name',
-       'Vid',
-       'Subdivision',
-   ];
+    'id',
+    'NameRoom',
+    'Vid',
+    'NameSubdivision',
+    'login',
+];
 
 }

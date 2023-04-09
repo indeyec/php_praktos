@@ -11,8 +11,8 @@ class Subdivision extends Model
 
    public $timestamps = false;
    protected $fillable = [
-       'id',
-       'Name',
-       'Vid',
-   ];   
+    'id',
+    'NameSubdivision',
+    'Vid',
+];   
 }

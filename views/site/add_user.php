@@ -22,24 +22,37 @@
 
 			<div class="block">
                 <?php
-                echo('Выбор номера:');
-                echo '<select id="" name="number">';
-                foreach ($usernums as $Usernum) {
-                    echo "<option value=\"$Usernum->number\">"
-                        . $Usernum->number.
+                echo('Выбор помещения:');
+                echo '<select id="" name="NameRoom">';
+                foreach ($rooms as $Room) {
+                    echo "<option value=\"$Room->NameRoom\">"
+                        . $Room->NameRoom.
                         "</option>";
                 }
                 echo '</select>';
                 ?>
             </div>
 
-			<div class="block">
+            <div class="block">
                 <?php
                 echo('Выбор подразделения:');
-                echo '<select id="" name="Name">';
+                echo '<select id="" name="NameSubdivision">';
                 foreach ($subdivisions as $Subdivision) {
-                    echo "<option value=\"$Subdivision->Name\">"
-                        . $Subdivision->Name.
+                    echo "<option value=\"$Subdivision->NameSubdivision\">"
+                        . $Subdivision->NameSubdivision.
+                        "</option>";
+                }
+                echo '</select>';
+                ?>
+            </div>
+
+            <div class="block">
+                <?php
+                echo('Выбор номера:');
+                echo '<select id="" name="number">';
+                foreach ($usernums as $Usernum) {
+                    echo "<option value=\"$Usernum->number\">"
+                        . $Usernum->number.
                         "</option>";
                 }
                 echo '</select>';
